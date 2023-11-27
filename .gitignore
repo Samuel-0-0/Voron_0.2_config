@@ -1,0 +1,8 @@
+backup/*
+cert/*
+config/timelapse.cfg
+config/print_area_bed_mesh.cfg
+gcodes/*
+logs/*
+timelapse/*
+.github_token
