@@ -1,8 +1,17 @@
 #!/bin/bash
 
-# Copyright (C) 2024 Samuel Wang <imhsaw@gmail.com>
+########################################################################################################################
 #
+# 版权所有 (C) 2025  Samuel Wang    Discord: Samuel-0-0#0576    Github: Samuel-0-0    Bilibili: Samuel-0_0
+#
+# 本文件可以根据GNU GPLv3许可协议进行分发
 # This file may be distributed under the terms of the GNU GPLv3 license
+#
+# 根据你的设置编辑此文件
+#
+# 目标：备份配置文件到GitHub
+#
+
 
 ### 需要备份的文件夹
 config_folder=~/printer_data
@@ -11,7 +20,7 @@ klipper_folder=~/klipper
 ### Moonraker文件夹位置，默认'~/moonraker'
 moonraker_folder=~/moonraker
 ### Mainsail文件夹位置，默认'~/mainsail'
-mainsail_folder=~/mainsail
+#mainsail_folder=~/mainsail
 
 MAX_RETRIES=10
 
@@ -121,8 +130,9 @@ function push_config {
   #合并
   git add . -v
   current_date=$(date +"%Y-%m-%d %T")
-  read -p "更新说明:" babala
-  git commit -m "$babala [$m1,$m2,$m3]"
+  #read -p "更新说明:" babala
+  #git commit -m "$babala [$m1,$m2,$m3]"
+  git commit -m "$1 [$m1,$m2,$m3]"
   RETRY_COUNT=0
   git_push
 }
